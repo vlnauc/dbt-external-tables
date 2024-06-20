@@ -78,3 +78,13 @@ integration_tests:
       authentication: CLI
       schema: dbt_external_tables_integration_tests_azuresql
       threads: 1
+
+    teradata:
+      type: teradata
+      host: "{{ env_var('TERADATA_TEST_HOST') }}"
+      user: "{{ env_var('TERADATA_TEST_USER') }}"
+      password: "{{ env_var('TERADATA_TEST_PASS') }}"
+      schema: dbt_external_tables_integration_tests_teradata
+      logmech: TD2
+      tmode: ANSI
+      threads: 1
